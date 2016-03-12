@@ -24,9 +24,15 @@ See [Represent! (CS160; PROG02-B)] (https://www.youtube.com/watch?v=O4OsFUTP4vs&
 
 
 
-## Acknowledgments
+## Acknowledgments and Sources 
 
 * Jack Thakar 
-* Tapas Behera
-* peceps
-* ishu 
+* Jeff Tan
+* Tapas Behera (http://www.sprima.com/blog/?p=144) (https://github.com/tapasb/ImagineAir)
+* peceps (http://stackoverflow.com/questions/2317428/android-i-want-to-shake-it)
+* ishu (http://stackoverflow.com/questions/16333754/how-to-customize-listview-using-baseadapter)
+* Ben Jakuben (http://stackoverflow.com/questions/2317428/android-i-want-to-shake-it)
+* Obaro Ogbo (http://www.androidauthority.com/use-remote-web-api-within-android-app-617869/) (https://github.com/obaro/SimpleWebAPI/blob/master/app/src/main/java/com/sample/foo/simplewebapi/MainActivity.java)
+* http://stackoverflow.com/questions/3641304/get-latitude-and-longitude-using-zipcode
+* 
+

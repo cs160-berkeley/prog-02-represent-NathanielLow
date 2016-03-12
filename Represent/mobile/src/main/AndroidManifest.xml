@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nathaniel.represent">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,7 +33,7 @@
             android:name=".ListRepresentativesActivity"
             android:label="@string/title_activity_list_representatives"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.nathaniel.represent.MainActivity" />
@@ -39,11 +42,17 @@
             android:name=".RepresentativeDetailActivity"
             android:label="@string/title_activity_representative_detail"
             android:parentActivityName=".ListRepresentativesActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.nathaniel.represent.ListRepresentativesActivity" />
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCXEm-THmJgcLnBA69yuU6UB5M5ererVf8"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="e939e48ae826a1f2bf15dd17a118b2b1d7ae618a" />
     </application>
 
 </manifest>

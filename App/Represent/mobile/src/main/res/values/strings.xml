@@ -19,4 +19,5 @@
     <string name="end_term_title"><u>Term Ends:</u></string>
     <string name="committees_title"><u>Committees:</u></string>
     <string name="bills_title"><u>Bills:</u></string>
+    <string name="sunlight_api_key">f73c4ad3d3434cf1bafddcd187cea7dc</string>
 </resources>

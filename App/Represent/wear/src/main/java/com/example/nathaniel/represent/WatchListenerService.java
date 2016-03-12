@@ -13,8 +13,7 @@ import java.nio.charset.StandardCharsets;
  * Created by Nathaniel on 2/24/2016.
  */
 public class WatchListenerService extends WearableListenerService {
-    // In PhoneToWatchService, we passed in a path, either "/FRED" or "/LEXY"
-    // These paths serve to differentiate different phone-to-watch messages
+
     private static final String ZIP_CODE = "/zipCode";
 
     @Override
@@ -26,12 +25,11 @@ public class WatchListenerService extends WearableListenerService {
             Intent intent = new Intent(this, RepresentativeActivity.class );
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("ZIP_CODE", value);
-            Log.d("T", "about to start watch MainActivity with CAT_NAME: " + value);
+            Log.d("T", "about to start watch RepresentativeActivity with DATA: " + value);
             startActivity(intent);
         }
         else {
             super.onMessageReceived(messageEvent);
         }
-
     }
 }

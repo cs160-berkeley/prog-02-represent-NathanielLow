@@ -1,102 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorBackground"
     tools:context="com.example.nathaniel.represent.MainActivity" >
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/detail_toolbar"
+    <LinearLayout
+        android:id="@+id/detailedLinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:background="@color/colorBackground" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
-            android:id="@+id/detailedLinearLayout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerHorizontal="true">
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/portrait"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:layout_marginBottom="25dp"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_marginRight="16dp" />
 
-            <TextView
-                android:id="@+id/name"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_gravity="center_horizontal"
-                android:textSize="20sp"/>
+                android:orientation="vertical"
+                android:layout_marginTop="20dp" >
 
-            <TextView
-                android:id="@+id/party"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/termEndTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/end_term_title"
-                android:layout_gravity="left"/>
+                <TextView
+                    android:id="@+id/party"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
 
-            <TextView
-                android:id="@+id/termEnd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:layout_gravity="left"/>
+                <TextView
+                    android:id="@+id/termEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/committees_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/committees_title"
-                android:layout_gravity="left"/>
-
-            <TextView
-                android:id="@+id/committees"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:layout_gravity="left"/>
-
-            <TextView
-                android:id="@+id/bills_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/bills_title"
-                android:layout_gravity="left"/>
-
-            <TextView
-                android:id="@+id/bills"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"/>
+            </LinearLayout>
 
         </LinearLayout>
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/committees_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/committees_title"
+            android:textSize="16sp"
+            android:layout_gravity="left"/>
 
-  </LinearLayout>
+        <ListView
+            android:id="@+id/committees"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            android:fadeScrollbars="false" />
+
+        <TextView
+            android:id="@+id/bills_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bills_title"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="left"/>
+
+        <ListView
+            android:id="@+id/bills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fadeScrollbars="false" />
+
+    </LinearLayout>
+
+  </RelativeLayout>

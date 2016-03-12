@@ -1,10 +1,8 @@
 package com.example.nathaniel.represent;
 
-import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 
 /**
  * Created by Nathaniel on 3/1/2016.
@@ -17,6 +15,9 @@ import android.hardware.SensorManager;
 
 
 /**
+ * created by Nathaniel Low on 3/1/16
+ * Special thanks to peceps on StackOverflow (http://stackoverflow.com/questions/2317428/android-i-want-to-shake-it)
+ *
  * Listener that detects shake gesture.
  */
 public class ShakeEventListener implements SensorEventListener {

@@ -12,7 +12,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created by Nathaniel on 3/1/2016.
- * Some Code taken from Ben Jakuben on StackOverflow (http://stackoverflow.com/questions/2317428/android-i-want-to-shake-it)
  */
 public class MainActivity extends Activity {
 
@@ -34,9 +33,6 @@ public class MainActivity extends Activity {
             @Override
             public void onShake() {
                 int randZip = ThreadLocalRandom.current().nextInt(10000, 100000);
-                Intent randomRepWatchIntent = new Intent(context, RepresentativeActivity.class);
-                randomRepWatchIntent.putExtra("ZIP_CODE", String.valueOf(randZip));
-                startActivity(randomRepWatchIntent);
                 Intent randomRepPhoneIntent = new Intent(context, ShakeWatchToPhoneService.class);
                 randomRepPhoneIntent.putExtra("ZIP_CODE", String.valueOf(randZip));
                 startService(randomRepPhoneIntent);

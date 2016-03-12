@@ -27,8 +27,7 @@ public class RepresentativeActivity extends Activity {
 
         Bundle extras = getIntent().getExtras();
         String zip = extras.getString("ZIP_CODE");
-//        TextView text = (TextView) findViewById(R.id.name);
-//        text.setText(zip);
+
         final GridViewPager pager = (GridViewPager) findViewById(R.id.pager);
         pager.setAdapter(new GridPagerAdapter(this, getFragmentManager(), zip));
 
@@ -39,9 +38,6 @@ public class RepresentativeActivity extends Activity {
             @Override
             public void onShake() {
                 int randZip = ThreadLocalRandom.current().nextInt(10000, 100000);
-                Intent randomRepWatchIntent = new Intent(context, RepresentativeActivity.class);
-                randomRepWatchIntent.putExtra("ZIP_CODE", String.valueOf(randZip));
-                startActivity(randomRepWatchIntent);
                 Intent randomRepPhoneIntent = new Intent(context, ShakeWatchToPhoneService.class);
                 randomRepPhoneIntent.putExtra("ZIP_CODE", String.valueOf(randZip));
                 startService(randomRepPhoneIntent);

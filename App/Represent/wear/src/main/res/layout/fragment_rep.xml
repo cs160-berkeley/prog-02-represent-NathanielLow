@@ -10,15 +10,17 @@
     tools:deviceIds="wear_round"
     android:background="@color/colorPrimary">
 
-    <ImageView
-        android:id="@+id/fragment_portrait"
-        android:layout_width="50dp"
-        android:layout_height="100dp" />
+    <!--<ImageView-->
+        <!--android:id="@+id/fragment_portrait"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="100dp" />-->
 
     <TextView
         android:id="@+id/fragment_role"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/fragment_name"
@@ -29,5 +31,18 @@
         android:id="@+id/fragment_party"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/fragment_party2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/fragment_directions"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textSize="10sp" />
 
 </LinearLayout>
